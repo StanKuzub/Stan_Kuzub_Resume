@@ -1,0 +1,206 @@
+*,*:before,*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax {
+    position: relative;
+    height: 100%;
+    /*background-color: gold;*/
+}
+.parallax__mountain {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;    
+}
+.parallax__mountain_1 {
+    background: url('Images/m_1.png') 0 0 / cover no-repeat;
+}
+.parallax__mountain_2 {
+    z-index: 1;
+    background: url('Images/m_2.png') bottom right / 45% no-repeat;
+}
+.parallax__mountain_3 {
+  z-index: 1;
+    background: url('Images/m_3.png') bottom left / 100% no-repeat;
+}
+.parallax__fog {
+    background: url('Images/fog_1.png') bottom / 100% no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.content {
+    position: relative;
+ }
+ .content_body {
+    max-width: 1170px;
+    margin: 0px auto;
+ }
+ .content_header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+ }
+ .name{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+ }
+ .contacts span {
+    width: 100px;
+    padding: 10px 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    border: thick double #32a1ce;
+ }
+ .contacts{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    position: relative;
+    z-index: 3;
+ }
+ .about{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+ }
+ .about__info{
+    display: block;
+    padding: 0px 5px;
+    text-align: justify;
+ }
+ .summary {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0px 20px; 
+ }
+ .summary__items {
+    display: block;
+    padding: 0px 5px;
+    text-align: justify;
+ }
+ .skills {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0px 20px; 
+}
+.content_title {
+    font-size: 200px;
+ }
+ .content_subtitle {
+    font-size: 150px;
+ }
+ .content_article {
+    background-color: rgba (255, 255, 255, 0.5);
+    padding: 250px;
+    font-size: 18px;
+    line-height: 24px;
+ }
+
+ .jobs{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+ }
+.title{
+    display: none;
+        padding: 10px 0px 0px 0px;
+ }
+  .content_article p{margin-bottom: 20px;}
+.tabs {
+      margin: 0px 5px 0px 0px;
+  }
+  .tabs__items {
+      display: flex;
+  }
+  .tabs__item {
+      flex: 0 1 33.333%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
+      z-index: 2;
+      border: 2mm ridge rgba(211, 220, 50, .6);
+  }
+  .tabs__item span {
+      position: relative;
+      z-index: 3;
+  }
+  .tabs__block {
+    position: relative;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    display: none;
+
+  }
+  .tabs__block:before{
+      content: "";
+      height: 50px;
+      width: 33.333%;
+      position: absolute;
+      top: -50px;
+  }
+  .tabs__block:nth-child(1){
+      background-color: none;
+  }
+  .tabs__block:nth-child(1):before{
+    left: 0;
+  }
+.tabs__block:nth-child(2):before{
+    left: 33.333%;
+  }
+
+.tabs__block:nth-child(3):before{
+    right: 0;
+  }
+.tabs__block:target{
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .tabs__item span {
+        display: block;
+        width: 100px;
+        padding: 0px 5px;
+        white-space: nowrap;
+        text-align: center;
+        overflow: hidden;
+        font-size: 14px;
+        text-overflow: ellipsis;
+    }
+}
